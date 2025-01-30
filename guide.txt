@@ -1,0 +1,30 @@
+2. Установка на компьютере без интернета
+
+2.1. Устанавливаем Python (если нужно)
+Если Python не установлен, запускаем установщик и не забываем поставить галочку Add Python to PATH.
+2.2. Создаем и активируем виртуальное окружение
+
+python -m venv my_env
+
+Windows (cmd):
+
+my_env\Scripts\activate
+
+Windows (PowerShell):
+
+my_env\Scripts\Activate.ps1
+
+2.3. Устанавливаем библиотеки из скачанных файлов
+
+pip install --no-index --find-links=packages/ -r requirements.txt
+
+Опция --no-index запрещает pip искать в интернете, а --find-links=packages/ указывает путь к скачанным пакетам.
+
+2.4. Проверяем установку
+
+pip list
+Должны отобразиться все библиотеки.
+
+Запуск:
+
+python excel_copy_2.0.py
